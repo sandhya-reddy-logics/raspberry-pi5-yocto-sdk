@@ -1,0 +1,17 @@
+# Example bblayers.conf for a Raspberry Pi 5 Yocto build.
+# Assumes the build directory is <sources>/build and that the
+# three source repositories are siblings under <sources>.
+
+LCONF_VERSION = "7"
+
+BBPATH = "${TOPDIR}"
+BBFILES ?= ""
+
+BBLAYERS ?= " \
+  ${TOPDIR}/../openembedded-core/meta \
+  ${TOPDIR}/../meta-openembedded/meta-oe \
+  ${TOPDIR}/../meta-openembedded/meta-python \
+  ${TOPDIR}/../meta-openembedded/meta-networking \
+  ${TOPDIR}/../meta-openembedded/meta-multimedia \
+  ${TOPDIR}/../meta-raspberrypi \
+  "

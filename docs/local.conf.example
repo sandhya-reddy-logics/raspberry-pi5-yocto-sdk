@@ -1,0 +1,13 @@
+# Example Yocto local.conf for Raspberry Pi 5
+# Review and adapt this file for your own build environment.
+
+MACHINE = "raspberrypi5"
+
+# Enable Dropbear SSH server support in the image.
+EXTRA_IMAGE_FEATURES += "ssh-server-dropbear"
+
+# DEVELOPMENT ONLY — insecure settings used in the original lab.
+# Do not enable these settings on a production device or an
+# untrusted network.
+#
+# EXTRA_IMAGE_FEATURES ?= "allow-empty-password empty-root-password allow-root-login"
