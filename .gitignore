@@ -1,0 +1,15 @@
+# Generated executable and build files
+hello-rpi5
+*.o
+*.a
+*.so
+
+# Yocto build output
+tmp/
+cache/
+sstate-cache/
+
+# Editor and Python temporary files
+*~
+__pycache__/
+.DS_Store
