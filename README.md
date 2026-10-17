@@ -96,9 +96,21 @@ The SDK was generated and installed successfully. The C application was cross-co
 - Secure file transfer using SCP
 - Running cross-compiled applications on a target device
 
+## Configuration Examples
+
+The `docs/` directory contains example configuration files based on the Raspberry Pi 5 Yocto build environment used in this project.
+
+- [`local.conf.example`](docs/local.conf.example): Example machine and image-feature settings, including Dropbear SSH support.
+- [`bblayers.conf.example`](docs/bblayers.conf.example): Example layer configuration for OpenEmbedded Core, Meta OpenEmbedded, and the Raspberry Pi layer.
+- [`workflow.md`](docs/workflow.md): Detailed documentation of the Yocto SDK generation and cross-compilation workflow.
+
+**Note:** These are example configuration files. Review and adapt them to your own workspace paths and development requirements before using them. Do not enable insecure development settings on production devices.
+
 ## Repository Contents
 
-- `src/hello.c`: C application source code
-- `docs/`: additional project documentation and configuration examples
+- `src/hello.c`: C application source code for cross-compilation.
+- `docs/local.conf.example`: Example Yocto local configuration.
+- `docs/bblayers.conf.example`: Example Yocto layer configuration.
+- `docs/workflow.md`: Detailed workflow documentation.
 
 Build output, generated images, and the installed SDK are excluded from this repository because they can be recreated using the documented workflow.
